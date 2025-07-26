@@ -193,49 +193,240 @@ main {
 
 /* flower section  */
 
-.flower-img{
+.flower-img {
     width: 50%;
 }
 
-.flower-content{
+.flower-content {
     width: 50%;
 }
 
-.flower-img{
+.flower-img {
     position: relative;
 }
 
-.flower{
+.flower {
     margin-top: 200px;
 }
 
-.trusted-image{
-  position: absolute;
+.trusted-image {
+    position: absolute;
     top: -24%;
     left: 50%;
     transform: translate(1%, 0%);
     z-index: 2;
 }
 
-.flower-title{
-        font-family: "Noto Serif", serif;
+.flower-title {
+    font-family: "Noto Serif", serif;
     font-weight: bold;
     font-size: 50px;
     color: rgba(0, 0, 0, 1);
     margin-top: 38px;
 }
 
-.flower-content ul li{
+
+.flower-content ul li {
     list-style: disc;
 }
 
-.flower-description{
-     font-family: "Inter", sans-serif;
+.flower-description {
+    font-family: "Inter", sans-serif;
     font-size: 22px;
     color: rgba(0, 0, 0, 0.5);
-    padding-bottom: 20px;
 }
 
+
+
+
+/* deals section  */
+
+
+
+.deals{
+    margin-bottom: 120px;
+}
+
+.deals-content {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+
+.deals-title {
+    font-family: "Noto Serif", serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 15px;
+}
+
+.deals-description {
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.deals-images {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+}
+
+
+
+.deals-images-left-top {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.deals-images-left-bottom {
+    position: relative;
+    overflow: hidden;
+}
+
+.deals-images-right {
+    position: relative;
+    overflow: hidden;
+}
+
+.deals-images-left-top-content {
+    text-align: center;
+}
+
+.deals-images-left-bottom-content {
+    text-align: center;
+}
+  
+.deals-images-right-content h3{
+      font-family: "Noto Serif", serif;
+      font-weight: bold;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.deals-images-left-top-content h3{
+      font-family: "Noto Serif", serif;
+      font-weight: bold;
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 15px;
+}
+
+.deals-images-left-bottom-content h3{
+     font-family: "Noto Serif", serif;
+      font-weight: bold;
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+     margin-bottom: 15px;
+}
+
+
+.deals-images-right-content a{
+    font-family: "Inter", sans-serif;
+      font-weight: 500;
+    color: white;
+    font-size: 1.75rem;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+.deals-images-left-bottom-content a{
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.deals-images-left-top-content a{
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+
+.deals-images-right-content {
+     font-family: "Noto Serif", serif;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+
+.deals-images-left-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.deals-images-left-top-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+}
+
+.deals-images-left-bottom img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.deals-images-left-bottom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+}
+
+.deals-images-right img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.deals-images-right-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+}
+
+
+/* responsive for small device  */
 
 @media screen and (max-width:430px) {
     .navbar ul li:nth-child(1) {
@@ -250,11 +441,11 @@ main {
         display: none;
     }
 
-    .navbar{
-        margin:20px 10px;
+    .navbar {
+        margin: 20px 10px;
     }
 
-    .banner{
+    .banner {
         display: block;
     }
 
