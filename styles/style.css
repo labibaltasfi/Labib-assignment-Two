@@ -1,4 +1,4 @@
-/* @import "tailwindcss" */
+
 
 /* common  */
 * {
@@ -10,18 +10,13 @@
 .noto-serif-normal {
     font-family: "Noto Serif", serif;
     font-optical-sizing: auto;
-    /* font-weight: <weight>; */
     font-style: normal;
-    /* font-variation-settings: */
-    /* "wdth" 100; */
 }
 
 
 .inter-normal {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    /* font-weight: <weight>; */
-    /* font-style: normal; */
 }
 
 /* shared style  */
@@ -80,6 +75,7 @@
 }
 
 .navbar ul li:nth-child(1) {
+    font-weight: 600;
     color: rgba(37, 36, 50, 1);
 }
 
@@ -122,7 +118,7 @@
     font-family: "Noto Serif", serif;
     font-weight: bold;
     font-size: 65px;
-    margin-top: 98px;
+    margin-top: 60px;
     color: rgba(0, 0, 0, 1);
 }
 
@@ -225,6 +221,9 @@
     position: relative;
 }
 
+.flower-content{
+    align-items: center;
+}
 
 .trusted-image {
     position: absolute;
@@ -240,6 +239,7 @@
     font-size: 50px;
     color: rgba(0, 0, 0, 1);
     margin-top: 38px;
+    padding-bottom: 20px;
 }
 
 
@@ -251,6 +251,8 @@
     font-family: "Inter", sans-serif;
     font-size: 22px;
     color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+    padding-right: 120px;
 }
 
 
@@ -453,10 +455,10 @@
 }
 
 .join img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+     background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 .join-content {
@@ -481,6 +483,11 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+.join-form{
+    display: flex;
+}
+
 
 .join-input {
     font-family: "Inter", sans-serif;
@@ -553,8 +560,13 @@ footer {
 @media screen and (max-width:576px) {
 
 
-
+    
     /* navbar section  */
+
+    .main-logo img{
+        width: 70px;
+        height: 45px;
+    }
 
     .navbar ul li:nth-child(1) {
         display: none;
@@ -567,6 +579,10 @@ footer {
     .navbar ul li:nth-child(3) {
         display: none;
     }
+
+     .navbar ul li a{
+        font-size: 16px;
+     }
 
     .navbar {
         margin: 20px 10px;
@@ -623,116 +639,197 @@ footer {
 
     .section-description {
         font-size: 14px;
-        margin-right: 60px;
+        margin-right: 45px;
         margin-left: 40px;
         margin-bottom: 30px;
     }
 
-    .section-description br{
+    .section-description br {
         display: none;
     }
 
-.card img {
-    width: 100%;
-}
+    .card img {
+        width: 100%;
+    }
 
-.plants-card {
-    margin-left: 20px;
-    margin-right: 20px;
-}
+    .plants-card {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
 
     .plants-card {
-    gap: 20px;
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .card-content {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-price {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 19px 33px;
+    }
+
+
+    /* flower section  */
+
+    .flower {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .flower-img {
+        flex: 1;
+        width: 100%;
+    }
+
+    .flower-content {
+        flex: 1;
+        width: 100%;
+    }
+
+    .flower-content h2 {
+        font-size: 28px;
+        margin: 20px 0;
+    }
+
+    .flower-content ul li {
+        font-size: 14px;
+        margin-left: 30px;
+        margin-bottom: 16px;
+        padding-right: 5px;
+    }
+
+    .flower-title br {
+        display: none;
+    }
+
+    .trusted-image {
+        display: none;
+    }
+
+    /* deal section  */
+
+    .deals {
+        margin: 20px;
+        margin-bottom: 40px;
+    }
+
+    .deals-content {
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
+    .deals-title {
+        font-size: 28px;
+    }
 
-.card-content {
-    margin: 15px 0;
-    text-align: center;
-}
+    .deals-description {
+        padding: 0 20px;
+        font-size: 14px;
+    }
 
-.card-title {
-    font-size: 16px;
-}
+    .deals-description br{
+        display: none;
+    }
 
-.card-price {
-    font-size: 16px;
-}
+    .deals-images {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
 
-.btn-primary {
-    font-size: 16px;
-    font-weight: 600;
-    padding: 19px 38px;
-}
+    .deals-images-right-content a {
+        font-size: 1rem;
+    }
 
+    .deals-images-right-content h3 {
+        font-size: 1.25rem;
+    }
 
-/* flower section  */
+    /* join section  */
 
-.flower {
-    flex-direction: column;
-    margin: 20px;
-}
-
-.flower-img {
-    flex: 1;
+    .join img {
+            height: 276px;
     width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
-.flower-content {
-    flex: 1;
-    width: 100%;
+.join-form{
+    display: flex;
 }
 
-.flower-content h2{
-    font-size: 28px;
-    margin: 20px 0;
+.join-title {
+    font-size: 20px;
+    margin-bottom: 1.25rem;
 }
 
-.flower-content ul li {
-    font-size: 14px;
-    margin-left: 30px;
-    margin-bottom: 16px;
-}
-
-.flower-title br{
-    display: none;
-}
-
-.trusted-image{
-    display: none;
-}
-
-/* deal section  */
-
-.deals{
-    margin: 20px;
-}
-
-.deals-title {
-    font-size: 28px;
-}
-
-.deals-description {
-    font-size: 14px;
-}
-
-.deals-images {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-}
-
-.deals-images-right-content a {
+.join-input {
+    padding: 15px 20px 15px 20px;
     font-size: 1rem;
 }
 
-.deals-images-right-content h3{
-    font-size: 1.25rem;
+.join-btn {
+    padding: 16px 12px;
 }
+
+
+
+    /* footer section  */
+
+    .footer {
+        margin: 20px;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-description {
+        font-size: 16px;
+        padding-right: 12px;
+        margin-bottom: 30px;
+    }
+
+      .footer-middle{
+        display: block;
+      }
+
+    .footer-middle-left {
+        margin-right: 10px;
+    }
+
+    .footer-middle ul li {
+        font-family: "Inter", sans-serif;
+        Font-weight: 400;
+        color: rgba(0, 0, 0, 0.5);
+        Font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .footer-right {
+        margin-right: 141px;
+    }
+
+    .footer-right img {
+        width: 36px;
+        height: 36px;
+    }
 
 
 }
